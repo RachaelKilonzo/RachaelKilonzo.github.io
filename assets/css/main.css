@@ -2618,7 +2618,7 @@ input, select, textarea {
 					height: 100%;
 					opacity: 1.0;
 					z-index: 1;
-					opacity: 0.8;
+					opacity: 1;
 				}
 
 				.tiles article > .image:after {
@@ -2638,7 +2638,7 @@ input, select, textarea {
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 100% 100%;
-					opacity: 0.9;
+					opacity: 1;
 					z-index: 2;
 				}
 
@@ -2737,12 +2737,12 @@ input, select, textarea {
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #ffffff;
-					opacity: 0.35;
+					background-color: #333333;
+					opacity: 1;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
-					opacity: 0;
+					opacity: 1;
 				}
 
 			body:not(.is-touch) .tiles article:hover .content {
@@ -2759,7 +2759,7 @@ input, select, textarea {
 			-webkit-transform: scale(0.9);
 			-ms-transform: scale(0.9);
 			transform: scale(0.9);
-			opacity: 0;
+			opacity: 1;
 		}
 
 		body.is-touch .tiles article .content {
