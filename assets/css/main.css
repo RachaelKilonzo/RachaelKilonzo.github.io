@@ -2800,7 +2800,7 @@ input, select, textarea {
 			}
 
 				.tiles article {
-					width: calc(50% - 1.25em);
+					width: calc(25% - 1em);
 					margin: 1.25em 0 0 1.25em;
 				}
 
