@@ -2989,7 +2989,7 @@ input, select, textarea {
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
 		background: #e5a4b1;
-		color: #ffffff;
+		color: #000000;
 		cursor: default;
 		visibility: hidden;
 		z-index: 10002;
