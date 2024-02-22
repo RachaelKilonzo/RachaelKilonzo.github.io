@@ -7,6 +7,36 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
+body {
+	margin: auto;
+	width: 640px; 
+	padding: 50px;
+	font-family: 'Arial', sans-serif; 
+	color: #000000;    
+  }
+  
+  /* Centered Image Code */
+  
+  .container {
+	height: 500px;
+	position: relative;
+	border: 3px  /* Border color is optional */ 
+  }
+  
+   .center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  }
+  
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
