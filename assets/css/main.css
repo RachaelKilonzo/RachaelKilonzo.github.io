@@ -95,7 +95,7 @@ input, select, textarea {
 	}
 
 	*, *:before, *:after {
-		box-sizing: content-box;
+		box-sizing: inherit;
 		width: 100%;
 	}
 
