@@ -3174,8 +3174,9 @@ input, select, textarea {
 
 /* Footer */
 
+
 #footer {
-	padding: 3em 0; /* Adjust top and bottom padding */
+	padding: 5em 0 6em 0 ;
 	background-color: #e5a4b1;
 }
 
@@ -3318,8 +3319,6 @@ input, select, textarea {
 				#footer > .inner .copyright li:first-child {
 					margin-top: 0;
 				}
-
-	}
 /* Wrapper */
 
 	#wrapper > * > .inner {
