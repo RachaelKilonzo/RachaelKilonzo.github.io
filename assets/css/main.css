@@ -118,7 +118,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #000000;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Roboto', 'Roboto Condensed', 'Roboto Slab', Helvetica, sans-serif;
 		font-size: 15px;
 		font-weight: 500;
 		line-height: 1.75;
@@ -156,7 +156,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 900;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -168,8 +168,8 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.75em;
-		font-weight: 700;
+		font-size: 2.5em;
+		font-weight: 600;
 		line-height: 1.3;
 		margin: 0 0 1em 0;
 		letter-spacing: -0.035em;
@@ -197,19 +197,19 @@ input, select, textarea {
 		}
 
 	h2, h3, h4, h5, h6 {
-		font-weight: 900;
-		line-height: 1.5;
+		font-weight: 600;
+		line-height: 1.25;
 		margin: 0 0 2em 0;
-		text-transform: uppercase;
 		letter-spacing: 0.35em;
-	}
+		text-transform: none; /* Removes the uppercase transformation */
+	  }
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 		}
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 1.0em;
 	}
 
 	h3 {
