@@ -3177,7 +3177,7 @@ input, select, textarea {
 
 #footer {
 	padding: 3em 0 4em 0 ;
-	background-color: #343224;
+	background-color: #752b18;
 }
 
 	#footer > .inner {
@@ -3215,7 +3215,7 @@ input, select, textarea {
 			margin-top: 5em;
 			list-style: none;
 			font-size: 0.8em;
-			color: #e68265;
+			color: #ffffff;
 		}
 
 			#footer > .inner .copyright a {
@@ -3224,7 +3224,7 @@ input, select, textarea {
 
 			#footer > .inner .copyright li {
 				display: inline-block;
-				border-left: solid 1px #e68265;
+				border-left: solid 1px #ffffff;
 				line-height: 1;
 				padding: 0 0 0 1em;
 				margin: 0 0 0 1em;
