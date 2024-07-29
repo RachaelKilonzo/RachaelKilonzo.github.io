@@ -2998,8 +2998,8 @@ input, select, textarea {
 		max-width: 80%;
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
-		background: #e5a4b1;
-		color: #000000;
+		background: #524931;
+		color: #b32d2e;
 		cursor: default;
 		visibility: hidden;
 		z-index: 10002;
