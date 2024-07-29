@@ -2386,13 +2386,13 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px #e68265;
+			border: solid 1px #ffffff;
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #e68265;
+				background-color: #ffffff;
 			}
 
 		table td {
@@ -2407,11 +2407,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #e68265;
+			border-bottom: solid 2px #ffffff;
 		}
 
 		table tfoot {
-			border-top: solid 2px #e68265;
+			border-top: solid 2px #ffffff;
 		}
 
 		table.alt {
@@ -2419,7 +2419,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #e68265;
+				border: solid 1px #ffffff;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
