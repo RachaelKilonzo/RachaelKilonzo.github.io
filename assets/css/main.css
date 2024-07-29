@@ -273,7 +273,7 @@ input, select, textarea {
 		background: rgba(144, 144, 144, 0.075);
 		border-radius: 4px;
 		border: solid 1px #c9c9c9;
-		font-family: "Courier New", monospace;
+		font-family: 'Alegreya', serif;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -281,7 +281,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: 'Alegreya', serif;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -1859,8 +1859,8 @@ input, select, textarea {
 			}
 
 			.icon.style2:hover {
-				color: #f2849e;
-				border-color: #f2849e;
+				color: #e68265;
+				border-color: #e68265 ;
 			}
 
 			.icon.style2:active {
