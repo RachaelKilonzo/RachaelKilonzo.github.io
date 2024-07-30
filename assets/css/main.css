@@ -1851,7 +1851,7 @@ input, select, textarea {
 			display: inline-block;
 			text-align: center;
 			line-height: 2.65em;
-			color: inherit;
+			color: #ffffff;
 		}
 
 			.icon.style2:before {
