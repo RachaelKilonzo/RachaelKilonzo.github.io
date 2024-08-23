@@ -1,23 +1,20 @@
-# 30DayMapChallenge
+# Data Science Portfolio
 
-### During the month of August 2024, the goal is to create different maps. The intention is to concentrate on Sub-Sahara African countries but may extend to other regions.
+Welcome to my data science portfolio, hosted on GitHub Pages using the **Phantom** HTML template by HTML5 UP. This site showcases my projects, skills, and experience in data science, including topics like data analysis, machine learning, and visualization.
 
-### Goals and Objectives
-- **Raise Awareness:** Highlight the unique features and challenges of Sub-Sahara African countries.
-- **Skill Development:** Improve my mapping and data visualization skills through consistent practice.
-- **Community Engagement:** Connect with other map enthusiasts and contribute to the global mapping community.
+## Features
 
-### Tools and Techniques
-Throughout this challenge, I will be using a variety of tools and techniques, including:
-- **GIS Software:** QGIS, ArcGIS
-- **Programming Languages:** Python, R
+- **Responsive Design**: The Phantom template ensures that the site looks great on any device.
+- **Project Highlights**: Explore detailed case studies and projects that demonstrate my expertise.
+- **Interactive Visualizations**: Experience dynamic charts and graphs that bring data to life.
+- **Clean and Minimalist Layout**: A simple, easy-to-navigate interface to find information quickly.
 
-### Daily Themes
-Each map of the challenge will have a specific theme or focus area. Examples of themes include:
-- **Day 1:** Sub-Sahara Africa Rivers
-- **Day 2:** Kenya's River Basins
-- **Day 3:** Air Quality Index for Italy on 03/08/2024
-- **Day 6:** Kibera Slums: 2.5 Km Radius
-- **Day 7:** Mapping the Mukuru Slums Cluster
-- **Day 8:** Streets of Urban Hubs of East Africa
-- **Day 9:** Arrests of Rape and Sex crimes by the NYPD in NYC
+## Hosting
+
+This portfolio is hosted on GitHub Pages, providing a reliable and free platform for sharing my work.
+
+## License
+
+The content of this site is open source and available under the [MIT License](https://opensource.org/licenses/MIT). The Phantom template is also free to use under the [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/).
+
+Feel free to explore my portfolio and reach out if you have any questions or collaboration ideas!
