@@ -3582,6 +3582,13 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+
+		 /* >>>>>> INSERT THESE THREE LINES HERE <<<<<< */
+        background-image: url('../images/cherry-blossoms-bokeh.webp');
+        background-position: center;
+        background-size: cover;
+        /* >>>>>> END INSERTION <<<<<< */
+    }
 	}
 
 		#banner h2 {
@@ -3669,7 +3676,7 @@ input, select, textarea {
 		}
 
 			#banner .more:after {
-				background-image: url("images/cherry-blossoms-bokeh.webp");
+				background-image: url("images/arrow.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
