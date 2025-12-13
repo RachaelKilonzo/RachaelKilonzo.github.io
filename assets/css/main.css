@@ -3416,7 +3416,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-			menu {
+			#menu {
 				padding: 3em 1.5em;
 			}
 		}
