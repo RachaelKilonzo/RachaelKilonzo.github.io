@@ -13,7 +13,7 @@ You can view the fully deployed, interactive portfolio here:
 
 ---
 
-## ✨ Featured Projects
+## Featured Projects
 
 | Project Title | Core Skills Demonstrated | Repository Link |
 | :--- | :--- | :--- |
