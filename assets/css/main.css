@@ -4000,5 +4000,5 @@ input, select, textarea {
     width: auto;
     vertical-align: middle;
     position: relative;
-    top: -0.2 em;    /* MOVE DOWN! */
+    top: -0.5 em;    /* MOVE DOWN! */
 }
