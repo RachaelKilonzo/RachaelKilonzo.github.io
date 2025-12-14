@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Rachael Kilonzo - Data Science Portfolio</title>
+		<title>DS & ML Projects - Rachael Kilonzo Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,13 +12,13 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 	</head>
-	<body class="landing is-preload">
+	<body> <!-- Note: removed 'landing is-preload' class -->
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+					<header id="header"> <!-- Note: Removed 'alt' class for inner page header -->
 						<h1><a href="index.html"><img src="images/rk_logo_small.png" alt="R.K" id="header-logo"></a></h1>
 						<nav id="nav">
 							<ul>
@@ -43,112 +38,54 @@
 						</nav>
 					</header>
 
-				<!-- Banner (The Front Page/Hero Section) -->
-					<section id="banner">
-						<div class="inner">
-							<!-- 1. Headline -->
-							<h2>Rachael N. Kilonzo</h2>
-							<!-- 2. Warm Welcome Sub-Headline -->
-							<p>Welcome! This is a curated collection of my data science projects, <br />built during my free time to showcase practical skills and passion.</p>
-							<ul class="actions special">
-								<!-- 3. Primary Button -->
-								<li><a href="#two" class="button primary">View Key Projects</a></li>
-							</ul>
-						</div>
-						<!-- 3. Secondary Button/Scrolly Link -->
-						<a href="#footer" class="more scrolly">Contact & Social Links</a>
-					</section>
-
-				<!-- One (About Me / Core Skills Section) -->
-					<section id="one" class="wrapper style1 special">
+				<!-- Main Content - Project Listing -->
+					<section id="main" class="wrapper">
 						<div class="inner">
 							<header class="major">
-								<h2>A Closer Look at My Methodology</h2>
-								<p>My work focuses on translating complex data problems into clear, production-ready solutions.<br />
-								I specialize in the full data science lifecycle, from cleaning to deployment.</p>
+								<h2>Data Science & Machine Learning Projects</h2>
+								<p>A collection of my end-to-end data science projects, complete with code, methodology, and results.</p>
 							</header>
-							<ul class="icons major">
-								<!-- Replace these with Data Science Concepts -->
-								<li><span class="icon solid fa-database major style1"><span class="label">Data</span></span></li>
-								<li><span class="icon solid fa-brain major style2"><span class="label">Model</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Code</span></span></li>
-							</ul>
-						</div>
-					</section>
 
-				<!-- Two (Project Showcase / Spotlight Section) -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/ds.jpeg" alt="Project 1 Image" /></div><div class="content">
-								<h2>Data Science & Machine Learning</h2>
-								<p>End-to-end projects from data acquisition to model deployment, covering predictive modeling, classification, and forecasting.</p>
-                                <ul class="actions">
-                                    <li><a href="ds&ml.html" class="button">View Projects (5)</a></li>
-                                </ul>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/chord_diagram.png" alt="Project 2 Image" /></div><div class="content">
-								<h2>Data Visualization & Storytelling</h2>
-								<p>Interactive dashboards, impactful static charts, and data narratives built using Tableau, Power BI, Plotly, and D3.js.</p>
-                                <ul class="actions">
-                                    <li><a href="vizualizations.html" class="button">View Projects (4)</a></li>
-                                </ul>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="Project 3 Image" /></div><div class="content">
-								<h2>Creative Coding & Data Art</h2>
-								<p>Explorations into generating art and unique visuals using data and code.</p>
-                                <ul class="actions">
-                                    <li><a href="creative.html" class="button">View Gallery (3)</a></li>
-                                </ul>
-							</div>
-						</section>
-						<section class="spotlight">
-    						<div class="image"><img src="images/pic04.jpg" alt="Publications Image" /></div><div class="content">
-        						<h2>Publications, Articles & Writing</h2>
-        						<p>A collection of my published research articles, professional blog posts, and written contributions to the data science community.</p>
-        						<ul class="actions">
-            						<li><a href="generic.html" class="button">View Writings (3)</a></li>
-        						</ul>
-    						</div>
-						</section>
-					</section>
+							<!-- Project 1: Fraud Detection Model -->
+							<section class="spotlight">
+								<div class="image"><img src="images/fraud_detection.jpg" alt="Fraud Detection Project" /></div>
+								<div class="content">
+									<h3>Project 1: Real-Time Fraud Detection</h3>
+									<p>A supervised machine learning model (XGBoost) deployed via an API to classify financial transactions as fraudulent or legitimate with 98.5% accuracy. Focus on handling imbalanced data.</p>
+									<ul class="actions">
+										<li><a href="YOUR_PROJECT_1_GITHUB_LINK" class="button">View Code on GitHub</a></li>
+										<li><a href="YOUR_PROJECT_1_DEMO_LINK" class="button alt">Live Demo/Write-up</a></li>
+									</ul>
+								</div>
+							</section>
 
-				<!-- Three (Skills and Tools Grid) - Use for a Quick Overview -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Core Skills and Tools</h2>
-								<p>Proficient in a variety of programming languages, libraries, and cloud platforms.</p>
-							</header>
-							<ul class="features">
-								<li class="icon solid fa-code">
-									<h3>Languages</h3>
-									<p>Python (Pandas, NumPy), SQL, R, Bash.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3>ML/Stats</h3>
-									<p>Scikit-learn, TensorFlow, PyTorch, Statistical Modeling, A/B Testing.</p>
-								</li>
-								<li class="icon solid fa-chart-bar">
-									<h3>Visualization</h3>
-									<p>Tableau, Power BI, Matplotlib, Seaborn, Plotly.</p>
-								</li>
-								<li class="icon solid fa-cloud">
-									<h3>Cloud & Deployment</h3>
-									<p>AWS (S3, EC2), Docker, Git, Heroku.</p>
-								</li>
-								<li class="icon solid fa-database">
-									<h3>Data/ETL</h3>
-									<p>PostgreSQL, MySQL, ETL pipelines, Data Warehousing.</p>
-								</li>
-								<li class="icon fa-lightbulb">
-									<h3>Soft Skills</h3>
-									<p>Stakeholder Communication, Data Storytelling, Documentation.</p>
-								</li>
-							</ul>
+							<!-- Project 2: Customer Churn Prediction -->
+							<section class="spotlight alt style2"> <!-- Note: Added 'alt style2' for alternating background/color -->
+								<div class="image"><img src="images/churn_model.jpg" alt="Churn Prediction Project" /></div>
+								<div class="content">
+									<h3>Project 2: Telco Customer Churn Analysis</h3>
+									<p>Exploratory Data Analysis (EDA) followed by a Logistic Regression model to predict customer churn. Delivered key insights on factors contributing to customer loss (e.g., contract type, monthly charges).</p>
+									<ul class="actions">
+										<li><a href="YOUR_PROJECT_2_GITHUB_LINK" class="button">View Notebook & Code</a></li>
+										<li><a href="YOUR_PROJECT_2_WRITEUP_LINK" class="button alt">Full Write-up</a></li>
+									</ul>
+								</div>
+							</section>
+
+							<!-- Project 3: Time Series Forecasting -->
+							<section class="spotlight">
+								<div class="image"><img src="images/time_series.jpg" alt="Time Series Project" /></div>
+								<div class="content">
+									<h3>Project 3: Inventory Demand Forecasting</h3>
+									<p>Used the Prophet library and ARIMA models to accurately forecast inventory demand for a retail client, reducing out-of-stock incidents by 15%. Focus on feature engineering with seasonality.</p>
+									<ul class="actions">
+										<li><a href="YOUR_PROJECT_3_GITHUB_LINK" class="button">View Code</a></li>
+										<li><a href="YOUR_PROJECT_3_WRITEUP_LINK" class="button alt">Read Case Study</a></li>
+									</ul>
+								</div>
+							</section>
+
+							<!-- You can add Project 4 and 5 spotlights here using the same structure -->
 						</div>
 					</section>
 
