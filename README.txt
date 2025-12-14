@@ -1,45 +1,50 @@
-Spectral by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# 📊 Rachael Kilonzo | Data Science Portfolio
 
+Welcome to my portfolio repository!
 
-A big, modern, blocky affair with a mobile-style menu, fully responsive styling,
-and an assortment of pre-styled elements. So, pretty much what you were expecting
--- except, of course, for how it's put together, specifically:
+This collection showcases a variety of my personal projects, demonstrating my skills in data analysis, machine learning, and data visualization. The goal of this site is to translate complex data science work into clear, actionable business narratives.
 
-- It's built with components from my Responsive Tools project.
+---
 
-- It uses flexbox, which eliminates all kinds of terrible hacks and clunky layout
-  stopgaps (like CSS grid systems).
+## 🚀 The Live Portfolio
 
-- It uses Sass* a lot more intelligently, thanks in part to several new mixins
-  and functions I've been working on (as well as a few by @HugoGiraudel).
+You can view the fully deployed, interactive portfolio here:
+**[➡️ Visit Rachael Kilonzo's Live Portfolio](https://rachaelkilonzo.github.io)**
 
-  (* = still entirely optional if you prefer vanilla CSS :)
+---
 
-- A ton of other stuff.
+## ✨ Featured Projects
 
-In short, Spectral's the culmination of several new things I'm working on/trying out,
-so please, let me know what you think :)
+| Project Title | Core Skills Demonstrated | Repository Link |
+| :--- | :--- | :--- |
+| **Project 1: Predictive Modeling** | Python, Scikit-learn, Feature Engineering, Model Deployment | [Link to Project 1 Repo](YOUR_PROJECT_1_REPO_URL) |
+| **Project 2: Data Visualization & BI** | SQL, Tableau/Power BI, Data Storytelling, Dashboarding | [Link to Project 2 Repo](YOUR_PROJECT_2_REPO_URL) |
+| **Project 3: Deep Learning/NLP** | TensorFlow/PyTorch, NLP, Text Preprocessing, Model Training | [Link to Project 3 Repo](YOUR_PROJECT_3_REPO_URL) |
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+---
 
-(* = not included)
+## 🛠️ Technology Stack
 
-AJ
-aj@lkn.io | @ajlkn
+*   **Languages:** Python, SQL, R
+*   **Libraries:** Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Plotly
+*   **Tools:** Git, Docker, VS Code, Cloud Platforms (e.g., AWS/Azure)
+*   **Deployment:** GitHub Pages (using the **Spectral** template)
 
+---
 
-Credits:
+## 🔗 Connect With Me
 
-	Demo Images:
-		Unsplash (unsplash.com)
+| Platform | Link |
+| :--- | :--- |
+| **LinkedIn** | [Connect with Rachael Kilonzo](https://www.linkedin.com/in/rachael-kilonzo-387999339/) |
+| **GitHub** | [View All Repositories](https://github.com/RachaelKilonzo) |
+| **Email** | [rachaelkilonzo@outlook.com](mailto:rachaelkilonzo@outlook.com) |
+| **Blog/Articles** | [Link to Your Blog](YOUR_BLOG_URL) |
 
-	Icons:
-		Font Awesome (fontawesome.io)
+***
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+### Template Acknowledgement
+
+This portfolio is built upon the clean, responsive design of the **Spectral** template by HTML5 UP. All credit for the base theme and design structure belongs to the original creator.
+
+---
