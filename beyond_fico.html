@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Beyond FICO: AI-Driven Credit Risk Engine - Rachael Kilonzo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html"><img src="images/rk_logo_small.png" alt="R.K" id="header-logo"></a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="ds&ml.html">DS & ML</a></li>
+											<li><a href="vizualizations.html">Visualizations</a></li>
+											<li><a href="creative.html">Creative Coding</a></li>
+											<li><a href="generic.html">Publications & Articles</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main Content - Project Writeup -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header class="major">
+								<!-- Main Project Title -->
+								<h2>Beyond FICO: Building an AI-Driven Credit Risk Engine</h2>
+								<p>A FinTech Case Study using XGBoost & Python</p>
+							</header>
+
+							<div class="content">
+								<!-- Metadata Box (Styled using basic HTML elements) -->
+								<div style="border-left: 4px solid #f28498; padding-left: 1.5em; margin-bottom: 3em;">
+									<p>
+										<strong>Project Type:</strong> Credit Risk Modeling / FinTech <br>
+										<strong>Tech Stack:</strong> Python, Scikit-Learn, XGBoost, Pandas <br>
+										<strong>Performance:</strong> 0.74 ROC-AUC on 2.2 Million Records
+									</p>
+								</div>
+
+								<!-- 1. Introduction -->
+								<h3>The Billion-Dollar Balancing Act</h3>
+								<p>Financial institutions face a perpetual dilemma: how do you maximize loan growth without opening the floodgates to defaults? Traditional underwriting relies heavily on static credit scores (like FICO). While effective, this often creates a "credit invisible" gap—rejecting applicants who are financially stable but lack a long history, while approving "prime" borrowers who are actually over-leveraged.</p>
+								<p>For this project, I set out to build a Probability of Default (PoD) engine. Using the massive Lending Club dataset (2007–2018), I analyzed 2.2 million loan applications representing $34 billion in value to build a machine learning framework capable of distinguishing viable borrowers from high-risk applicants.</p>
+
+								<!-- 2. Strategy -->
+								<h3>1. The Strategy: Preventing Leakage</h3>
+								<p>One of the biggest pitfalls in credit risk modeling is Data Leakage—accidentally using future information (like the current status of a loan) to predict the past. To build a realistic production-ready framework, I adhered to a strict preprocessing strategy:</p>
+								<ul>
+									<li><strong>Temporal Filtering:</strong> I rigorously removed features that wouldn't exist at the moment of application (e.g., "Total Payment Received"). The model can only see what an underwriter sees.</li>
+									<li><strong>Target Mapping:</strong> The dataset is highly imbalanced (11.9% default rate). I mapped 'Charged Off' and 'Default' loans to 1, and 'Fully Paid' to 0.</li>
+									<li><strong>Split-First Engineering:</strong> Statistical transformations (like scaling) were fit only on the training set to prevent test-set distribution leakage.</li>
+								</ul>
+
+								<!-- 3. Feature Engineering -->
+								<h3>2. Feature Engineering: The "Secret Sauce"</h3>
+								<p>Raw data rarely tells the whole story. I engineered domain-specific features to capture the two pillars of creditworthiness: Intent and Capacity.</p>
+								<h4>Payment-to-Income (PTI) Ratio:</h4>
+								<p>The Logic: A borrower might have a high income, but if their loan installment is huge, they will default.<br>
+								The Math: (Monthly Installment / (Annual Income / 12))</p>
+								<h4>Credit Utilization Efficiency:</h4>
+								<p>The Logic: This detects borrowers who are relying on revolving credit for liquidity—a major distress signal.</p>
+								<h4>Employment Stability Flag:</h4>
+								<p>The Logic: A Boolean flag for applicants employed for 2+ years, acting as a proxy for income continuity.</p>
+								<h4>Delinquency History:</h4>
+								<p>The Logic: A composite flag combining tax liens, past bankruptcies, and recent delinquencies.</p>
+
+								<!-- 4. EDA -->
+								<h3>3. What the Data Revealed (EDA)</h3>
+								<p>Before modeling, I visualized the behavioral differences between good and bad borrowers. The engineered features proved their worth immediately.</p>
+								<ul>
+									<li><strong>The Affordability Gap:</strong> Defaulters had a median PTI ratio of 8.4%, significantly higher than the 7.0% of compliant borrowers.</li>
+									<li><strong>The "History Repeats" Rule:</strong> Applicants with any history of delinquency had a default rate of 32.9%—nearly triple the baseline average.</li>
+									<li><strong>Utilization:</strong> Defaulters were using 55.5% of their available credit limits on average.</li>
+								</ul>
+								
+								<!-- IMAGE PLACEMENT FOR EDA -->
+								<figure>
+									<img src="images/risk_drivers_analysis.png" alt="Graph showing risk drivers analysis" style="width:100%; max-width:800px; display:block; margin: 1em auto;">
+									<figcaption style="text-align:center; font-style:italic;">Figure 1: Comparison of key engineered risk drivers between Compliant and Defaulted loans.</figcaption>
+								</figure>
+								<p></p>
+
+
+								<!-- 5. Model -->
+								<h3>4. Model Selection & Performance</h3>
+								<p>I established a baseline using a Random Forest classifier, but ultimately chose XGBoost for the production model due to its superior handling of class imbalance and gradient boosting capabilities.</p>
+								<h4>The Results</h4>
+								<ul>
+									<li><strong>ROC-AUC Score:</strong> 0.744 (Outperforming Random Forest at 0.718).</li>
+									<li><strong>Precision (Non-Default):</strong> 0.94. When the model says a borrower is safe, it is right 94% of the time.</li>
+									<li><strong>Recall (Default):</strong> 0.70. The model successfully flagged 70% of the actual defaults in the holdout set.</li>
+								</ul>
+
+								<!-- IMAGE PLACEMENT FOR MODEL PERFORMANCE -->
+								<figure>
+									<img src="images/model_performance.png" alt="ROC Curve and other model metrics" style="width:100%; max-width:800px; display:block; margin: 1em auto;">
+									<figcaption style="text-align:center; font-style:italic;">Figure 2: The ROC curve demonstrates the model's ability to maintain a high True Positive rate without exploding the False Positive rate.</figcaption>
+								</figure>
+								<p></p>
+
+								<!-- 6. Explainability -->
+								<h3>5. The "Black Box" Explained</h3>
+								<p>For a model to be adopted by a Credit Committee, it must be interpretable. Using XGBoost's gain metrics, I ranked the features that drive the decision-making process.</p>
+								<ul>
+									<li><strong>Credit Grade (Sub-Grade):</strong> The strongest predictor, acting as an aggregate of bureau health.</li>
+									<li><strong>Interest Rate:</strong> Higher rates correlate directly with risk (confirming risk-based pricing logic).</li>
+									<li><strong>Recent Inquiries:</strong> The inq_last_6mths feature was a top driver. High velocity of credit-seeking is a massive distress signal.</li>
+									<li><strong>Payment-to-Income (PTI):</strong> My engineered feature ranked in the top 5, validating the hypothesis that affordability is just as important as credit history.</li>
+								</ul>
+
+								<!-- IMAGE PLACEMENT FOR FEATURE IMPORTANCE -->
+								<figure>
+									<img src="images/feature_importance.png" alt="Feature Importance Chart" style="width:100%; max-width:800px; display:block; margin: 1em auto;">
+									<figcaption style="text-align:center; font-style:italic;">Figure 3: Ranked feature importance (Gain) from the final XGBoost model.</figcaption>
+								</figure>
+								<p></p>
+								
+								<!-- 7. Impact -->
+								<h3>6. Business Impact & Next Steps</h3>
+								<p>This model provides more than just a prediction; it offers a framework for automated decision-making. Based on the analysis, I propose three strategic implementations for the lending team:</p>
+								<ol>
+									<li><strong>The 15% Hard Cap:</strong> Threshold analysis suggests strictly capping loan approvals at a 15% Payment-to-Income ratio. This single rule would significantly reduce exposure to default-prone loans.</li>
+									<li><strong>Dynamic Pricing:</strong> Instead of broad buckets, use the model's predicted Probability of Default (PoD) to set interest rates at a granular individual level.</li>
+									<li><strong>The Watch List:</strong> Automate a "Manual Review" trigger for any applicant with >1 recent inquiry and >50% credit utilization, regardless of their income level.</li>
+								</ol>
+								
+								<hr>
+								<ul class="actions small">
+									<li><a href="YOUR_GITHUB_REPO_LINK" class="button primary">View Full Repository</a></li>
+									<li><a href="ds&ml.html" class="button alt">Back to DS & ML Projects</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- CTA (Contact Section) -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Ready to Collaborate?</h2>
+								<p>Want to work with me? Feel free to reach out directly.</p>
+							</header>
+							<ul class="actions stacked">
+								<li><a href="mailto:rachaelkilonzo@outlook.com" class="button fit primary">Email Me</a></li>
+								<li><a href="https://www.linkedin.com/in/rachael-kilonzo-387999339/" class="button fit">Connect on LinkedIn</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="YOUR_TWITTER_URL" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rachael-kilonzo-387999339/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/RachaelKilonzo" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:rachaelkilonzo@outlook.com.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Rachael Kilonzo 2025</li><li>This template is made with <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
