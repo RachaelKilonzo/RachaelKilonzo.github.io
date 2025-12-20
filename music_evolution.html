@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Decoding K-Pop: Generational Music Analysis - Rachael Kilonzo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html"><img src="images/rk_logo_small.png" alt="R.K" id="header-logo"></a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="ds&ml.html">DS & ML</a></li>
+											<li><a href="vizualizations.html">Visualizations</a></li>
+											<li><a href="creative.html">Creative Coding</a></li>
+											<li><a href="generic.html">Publications & Articles</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main Content - Project Writeup -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<header class="major">
+								<!-- Main Project Title -->
+								<h2>The Evolution of the Hallyu Sound: A Generational Data Analysis</h2>
+								<p>Mining the Spotify API to Decode 4 Generations of K-Pop using Python & R</p>
+							</header>
+
+							<div class="content">
+								<!-- Metadata Box -->
+								<div style="border-left: 4px solid #f28498; padding-left: 1.5em; margin-bottom: 3em;">
+									<p>
+										<strong>Project Type:</strong> Music Data Science / Exploratory Data Analysis <br>
+										<strong>Tech Stack:</strong> Python (Spotipy), R (Circlize), Pandas, Seaborn <br>
+										<strong>Dataset:</strong> 13,000+ Unique Tracks across 4 Musical Generations
+									</p>
+								</div>
+
+								<!-- 1. Introduction -->
+								<h3>The Sonic DNA of K-Pop</h3>
+								<p>K-Pop has evolved from a local South Korean phenomenon into a dominant global force. But beyond the high-budget music videos and synchronized choreography, the actual *audio architecture* of the music has undergone a radical transformation. From the 90s hip-hop influence of the 1st Generation to the experimental, high-tempo sounds of the 4th Generation, the "vibe" of K-Pop is quantifiable.</p>
+								<p>In this project, I built an end-to-end pipeline to analyze the evolution of K-Pop. I extracted audio features for over 13,000 tracks via the Spotify Web API, performed rigorous data cleaning in Python, and utilized R to create advanced circular visualizations that map the interconnectedness of musical attributes.</p>
+
+								<!-- 2. Strategy -->
+								<h3>1. Data Extraction: Mining the Spotify API</h3>
+								<p>Using the <code>Spotipy</code> library, I developed a script to crawl through artists categorized by their debut era. This wasn't a simple "search and download" task; it required a strategic approach to ensure data integrity:</p>
+								<ul>
+									<li><strong>Artist URI Management:</strong> To avoid ambiguity (e.g., artists with similar names), I utilized specific Spotify URIs for legendary groups like H.O.T (1st Gen) through to modern icons like Stray Kids (4th Gen).</li>
+									<li><strong>The Repetition Problem:</strong> K-Pop artists frequently release "Repackaged" albums. I implemented a filter to exclude the <code>appears_on</code> album group and prioritized original Korean releases.</li>
+									<li><strong>Feature Mapping:</strong> I captured 14 unique audio metrics for every song, including Danceability, Energy, Valence (mood), and Speechiness.</li>
+								</ul>
+
+								<!-- 3. Data Cleaning -->
+								<h3>2. Filtering for "Sonic Purity"</h3>
+								<p>Raw music data is noisy. To ensure the analysis reflected the actual creative evolution of the genre, I performed several layers of cleaning:</p>
+								<ul>
+									<li><strong>Language Filtering:</strong> I removed Japanese and Chinese versions of Korean tracks to prevent duplicate feature weighting for the same composition.</li>
+									<li><strong>Non-Musical Track Removal:</strong> I used regex and string matching to drop instrumentals, remixes, and "tour" versions that often skew liveness and loudness metrics.</li>
+									<li><strong>Imbalance Handling:</strong> Standardized all song and album names to lowercase to detect and drop duplicates across different regional releases.</li>
+								</ul>
+
+								<!-- 4. EDA -->
+								<h3>3. What the Data Revealed: The Generational Shift</h3>
+								<p>The exploratory analysis provided a clear narrative of how K-Pop has changed to meet modern streaming demands.</p>
+								<ul>
+									<li><strong>The Speed of Sound:</strong> The 4th Generation has the highest average tempo, reflecting the high-energy, performance-heavy nature of modern hits.</li>
+									<li><strong>The Shrinking Song:</strong> Much like the global industry, K-Pop song durations have steadily decreased with each generation to optimize for streaming replayability.</li>
+									<li><strong>Major vs. Minor:</strong> K-Pop is overwhelmingly "happy" in its structural mode, with nearly 60% of songs written in a Major key, though this gap narrowed in the 3rd and 4th Generations as "darker" concepts became popular.</li>
+								</ul>
+								
+								<!-- IMAGE PLACEMENT FOR EDA -->
+								<figure>
+									<img src="images/kpop/tempo_duration.png" alt="Tempo and Duration Analysis" style="width:100%; max-width:800px; display:block; margin: 1em auto;">
+									<figcaption style="text-align:center; font-style:italic;">Figure 1: Comparison of Tempo and Song Duration across four generations of K-Pop.</figcaption>
+								</figure>
+								<p></p>
+
+
+								<!-- 5. Advanced Viz -->
+								<h3>4. Visualizing Correlation: The R Chord Diagram</h3>
+								<p>While Python is excellent for data manipulation, I turned to **R** and the <code>chorddiag</code> library to visualize how musical features correlate with one another. Unlike a standard heatmap, a Chord Diagram allows us to see the "flow" of relationship strengths.</p>
+								<p>The diagram revealed that <strong>Energy and Loudness</strong> share the strongest link, while <strong>Acousticness</strong> sits as the outlier, almost always negatively correlated with the high-octane production styles of the modern era. This visualization provides a "fingerprint" of the K-Pop production style.</p>
+
+								<!-- IMAGE PLACEMENT FOR CHORD DIAGRAM -->
+								<figure>
+									<img src="images/kpop/chord_diagram.png" alt="Chord Diagram of Music Features" style="width:100%; max-width:800px; display:block; margin: 1em auto;">
+									<figcaption style="text-align:center; font-style:italic;">Figure 2: A circular Chord Diagram showing the high degree of correlation between Danceability, Energy, and Valence.</figcaption>
+								</figure>
+								<p></p>
+
+								<!-- 6. Mood Analysis -->
+								<h3>5. The Mood Scale: Happiest & Saddest Tracks</h3>
+								<p>By sorting by <strong>Valence</strong>, I identified the sonic extremes of the dataset. Interestingly, the "happiest" songs (high valence) were predominantly from the 1st and 2nd Generations, while the 4th Generation showed a higher density of "intense" but lower-valence tracks, suggesting a move away from traditional "bubblegum pop" toward more complex emotional palettes.</p>
+								
+								<!-- 7. Conclusion -->
+								<h3>6. Conclusion & Future Directions</h3>
+								<p>This analysis proves that K-Pop's evolution isn't just aesthetic—it is structural. Modern K-Pop is faster, shorter, and more "loud" than its predecessors, optimized perfectly for the viral, dance-heavy era of social media. Future iterations of this project could involve:</p>
+								<ol>
+									<li><strong>Lyric Sentiment Analysis:</strong> Correlating audio valence with the actual sentiment of the lyrics.</li>
+									<li><strong>Predictive Hit Modeling:</strong> Building a classifier to predict whether a song will become a "Top 10" hit based on its audio features.</li>
+									<li><strong>Artist Longevity:</strong> Analyzing if artists who maintain a consistent "sonic signature" last longer than those who frequently switch styles.</li>
+								</ol>
+								
+								<hr>
+								<ul class="actions small">
+									<li><a href="https://github.com/RachaelKilonzo/Spotify-Music-Data-Analysis" class="button primary">View Full Repository</a></li>
+									<li><a href="vizualizations.html" class="button alt">Back to Visualizations</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- CTA (Contact Section) -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Interested in the Data of Music?</h2>
+								<p>I’m always looking for new datasets to explore and stories to tell. Let's connect.</p>
+							</header>
+							<ul class="actions stacked">
+								<li><a href="mailto:rachaelkilonzo@outlook.com" class="button fit primary">Email</a></li>
+								<li><a href="https://www.linkedin.com/in/rachael-kilonzo-387999339/" class="button fit">LinkedIn</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rachael-kilonzo-387999339/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/RachaelKilonzo" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:rachaelkilonzo@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Rachael Kilonzo 2025</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
